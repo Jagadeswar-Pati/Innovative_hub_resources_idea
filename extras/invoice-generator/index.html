@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Innovative Hub - Tax Invoice</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="invoice-page" id="invoice">
+    <!-- Header: Logo + Company details left, Tax Invoice right -->
+    <header class="bill-header">
+      <div class="company-block">
+        <img src="logo.png" alt="Innovative Hub" class="company-logo" />
+        <h1 class="company-name">Innovative Hub</h1>
+        <p class="company-address">
+          Near Gothapatana Square ,<br />
+          Malipada , Bhubaneswar ,<br />
+          Odisha, India - 751003
+        </p>
+        <p class="company-gstin">GSTIN: 21HSRPP8072D1ZD</p>
+        <p class="company-email">Email: innovativehubofficial@gmail.com</p>
+      </div>
+      <div class="invoice-label-block">
+        <p class="invoice-label">Tax Invoice</p>
+        <p class="invoice-meta"><strong>Invoice:</strong> <span id="invoiceNumber">—</span></p>
+        <p class="invoice-meta"><strong>Date:</strong> <span id="invoiceDate">—</span></p>
+      </div>
+    </header>
+
+    <!-- Billing To -->
+    <section class="billing-to-section">
+      <p class="section-label">Billing To:</p>
+      <p class="customer-name" id="customerName">—</p>
+      <p class="customer-address" id="customerAddress">—</p>
+    </section>
+    <hr class="section-divider" />
+
+    <!-- Product Table: SL, Product, GST %, Qty, Rate, Amount, CGST, SGST, Total -->
+    <table class="bill-table">
+      <thead>
+        <tr>
+          <th class="col-sl">SL</th>
+          <th class="col-product">Product</th>
+          <th class="col-gst">GST %</th>
+          <th class="col-qty">Qty</th>
+          <th class="col-rate">Rate</th>
+          <th class="col-amount">Amount</th>
+          <th class="col-cgst">CGST</th>
+          <th class="col-sgst">SGST</th>
+          <th class="col-total">Total</th>
+        </tr>
+      </thead>
+      <tbody id="itemsBody"></tbody>
+    </table>
+
+    <!-- Below part: Subtotal, CGST Total, SGST Total, Delivery, Grand Total -->
+    <div class="below-section">
+      <div class="below-row">
+        <span>Sub Total</span>
+        <span id="subTotal">0.00</span>
+      </div>
+      <div class="below-row">
+        <span>CGST Total</span>
+        <span id="cgstTotal">0.00</span>
+      </div>
+      <div class="below-row">
+        <span>SGST Total</span>
+        <span id="sgstTotal">0.00</span>
+      </div>
+      <div class="below-row">
+        <span>Delivery</span>
+        <span id="delivery">0.00</span>
+      </div>
+      <div class="below-row grand-total">
+        <span>Grand Total</span>
+        <span id="grandTotal">0.00</span>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bill-footer">
+      <p>Thank you for your order.</p>
+      <p class="footer-note">Innovative Hub</p>
+    </footer>
+  </div>
+
+  <div class="controls">
+    <button type="button" onclick="fillSample()">Load sample data</button>
+    <button type="button" onclick="window.print()">Print / Save as PDF</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

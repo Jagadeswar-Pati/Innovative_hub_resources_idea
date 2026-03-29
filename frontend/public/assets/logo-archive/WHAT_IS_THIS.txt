@@ -1,0 +1,5 @@
+Old / duplicate logo files were moved here so public/assets stays uncluttered.
+Safe to delete this entire folder when you no longer need backups.
+
+The only file you edit for the live site is: ../logo.png
+Then run: npm run optimize-logo (or npm run build)

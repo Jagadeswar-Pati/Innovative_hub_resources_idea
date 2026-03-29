@@ -1,0 +1,56 @@
+# Root ignore rules for the entire repo
+
+# Dependencies
+**/node_modules/
+
+# Build outputs
+**/dist/
+**/dist-ssr/
+
+# Environment files (secrets)
+**/.env
+**/.env.local
+**/.env.*.local
+**/.env.*
+!**/.env.example
+
+# Common credential/key files
+**/credentials.json
+**/service-account*.json
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.crt
+
+# Logs
+**/logs/
+**/*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor/OS files
+**/.vscode/*
+!**/.vscode/extensions.json
+**/.idea/
+**/.DS_Store
+**/*.suo
+**/*.ntvs*
+**/*.njsproj
+**/*.sln
+**/*.sw?
+
+# Test and tooling
+**/coverage/
+**/.cache/
+
+# Cursor IDE (optional)
+.cursor/
+
+# Local tooling / stray build dirs
+.dist/
+
+# Optional standalone projects and notes live under `extras/` at repo root.
+# Remove that folder anytime if you do not need it; it is separate from admin / frontend / backend.
